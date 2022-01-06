@@ -126,17 +126,5 @@
     "type": "git",
     "url": "git+https://github.com/mozilla/nunjucks.git"
   },
-  "scripts": {
-    "build": "npm run build:transpile && npm run build:bundle",
-    "build:bundle": "node scripts/bundle.js",
-    "build:transpile": "babel nunjucks --out-dir .",
-    "codecov": "codecov",
-    "lint": "eslint nunjucks scripts tests",
-    "mocha": "mocha -R spec tests",
-    "prepare": "npm run build",
-    "test": "npm run lint && npm run test:instrument && npm run test:runner",
-    "test:instrument": "cross-env NODE_ENV=test scripts/bundle.js",
-    "test:runner": "cross-env NODE_ENV=test NODE_PATH=tests/test-node-pkgs scripts/testrunner.js"
-  },
   "version": "3.2.3"
 }
