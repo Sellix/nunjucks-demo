@@ -69,4 +69,8 @@ function globals() {
   };
 }
 
-module.exports = {};
+function _emptyObject() {
+  return {}
+}
+
+module.exports = _emptyObject;
